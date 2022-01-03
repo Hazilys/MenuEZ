@@ -10,3 +10,6 @@
 /ServiceDesPoseurs/ServiceDesPoseurs-ejb/target/
 /ServiceDesPoseurs/ServiceDesPoseurs-web/target/
 /ServiceDesPoseurs/ServiceDesPoseurs-ear/target/
+/ServiceCommercial/ServiceCommercial-web/target/
+/ServiceCommercial/ServiceCommercial-ear/target/
+/ServiceCommercial/ServiceCommercial-ejb/target/
