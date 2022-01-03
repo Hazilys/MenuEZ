@@ -33,16 +33,16 @@ public class Cheque implements Serializable {
     @NotNull
     private boolean isEncaisse;
 
-    public int getIdCommande() {
+    public long getIdCommande() {
         return idCommande;
     }
 
-    public void setIdCommande(int idCommande) {
+    public void setIdCommande(long idCommande) {
         this.idCommande = idCommande;
     }
     
     @NotNull
-    private int idCommande;
+    private long idCommande;
 
     public Cheque() {
     }
