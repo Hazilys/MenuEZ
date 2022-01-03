@@ -7,3 +7,6 @@
 /ServiceComptable/ServiceComptable-ejb/target/
 /ServiceComptable/ServiceComptable-web/target/
 /ServiceComptable/ServiceComptable-ear/target/
+/ServiceDesPoseurs/ServiceDesPoseurs-ejb/target/
+/ServiceDesPoseurs/ServiceDesPoseurs-web/target/
+/ServiceDesPoseurs/ServiceDesPoseurs-ear/target/
