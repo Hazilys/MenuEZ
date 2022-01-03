@@ -6,6 +6,7 @@
 package fr.miage.entities;
 
 import java.io.Serializable;
+import java.util.Calendar;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -14,10 +15,10 @@ import javax.validation.constraints.NotNull;
 
 /**
  *
- * @author Elias
+ * @author Camille
  */
 @Entity
-public class Cheque implements Serializable {
+public class RDVCommercial implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
@@ -25,51 +26,16 @@ public class Cheque implements Serializable {
     private Long id;
     
     @NotNull
-    private int numCheque;
+    private Long idAffaire;
     
     @NotNull
-    private double montant;
+    private Long idCommercial;
     
     @NotNull
-    private boolean isEncaisse;
-
-    public long getIdCommande() {
-        return idCommande;
-    }
-
-    public void setIdCommande(long idCommande) {
-        this.idCommande = idCommande;
-    }
+    private Long idClient;
     
     @NotNull
-    private long idCommande;
-
-    public Cheque() {
-    }
-
-    public int getNumCheque() {
-        return numCheque;
-    }
-
-    public void setNumCheque(int numCheque) {
-        this.numCheque = numCheque;
-    }
-
-    public double getMontant() {
-        return montant;
-    }
-
-    public void setMontant(double montant) {
-        this.montant = montant;
-    }
-
-    public boolean isIsEncaisse() {
-        return isEncaisse;
-    }
-
-    public void setIsEncaisse(boolean isEncaisse) {
-        this.isEncaisse = isEncaisse;
-    }
+    private Calendar dateRDVCommercial;
 
     public Long getId() {
         return id;
@@ -89,10 +55,10 @@ public class Cheque implements Serializable {
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Cheque)) {
+        if (!(object instanceof RDVCommercial)) {
             return false;
         }
-        Cheque other = (Cheque) object;
+        RDVCommercial other = (RDVCommercial) object;
         if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
             return false;
         }
@@ -101,7 +67,7 @@ public class Cheque implements Serializable {
 
     @Override
     public String toString() {
-        return "fr.miage.entities.Cheque[ id=" + id + " ]";
+        return "fr.miage.entities.RDVCommercial[ id=" + id + " ]";
     }
     
 }
