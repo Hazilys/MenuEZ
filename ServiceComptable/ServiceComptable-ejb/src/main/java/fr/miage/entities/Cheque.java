@@ -32,9 +32,17 @@ public class Cheque implements Serializable {
     
     @NotNull
     private boolean isEncaisse;
+
+    public int getIdCommande() {
+        return idCommande;
+    }
+
+    public void setIdCommande(int idCommande) {
+        this.idCommande = idCommande;
+    }
     
     @NotNull
-    private boolean isCommande;
+    private int idCommande;
 
     public Cheque() {
     }
@@ -61,14 +69,6 @@ public class Cheque implements Serializable {
 
     public void setIsEncaisse(boolean isEncaisse) {
         this.isEncaisse = isEncaisse;
-    }
-
-    public boolean isIsCommande() {
-        return isCommande;
-    }
-
-    public void setIsCommande(boolean isCommande) {
-        this.isCommande = isCommande;
     }
 
     public Long getId() {
