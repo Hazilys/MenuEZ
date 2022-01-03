@@ -1,15 +1,18 @@
-/ServiceChargeDesAffaires/ServiceChargeDesAffaires-ejb/target/
-/ServiceChargeDesAffaires/ServiceChargeDesAffaires-web/target/
-/ServiceChargeDesAffaires/ServiceChargeDesAffaires-ear/target/
-<<<<<<< Updated upstream
 /MenuEZ/MenuEZ-ejb/target/
 /MenuEZ/MenuEZ-web/target/
 /MenuEZ/MenuEZ-ear/target/
+/ServiceChargeDesAffaires/ServiceChargeDesAffaires-ejb/target/
+/ServiceChargeDesAffaires/ServiceChargeDesAffaires-web/target/
+/ServiceChargeDesAffaires/ServiceChargeDesAffaires-ear/target/
 /ServiceComptable/ServiceComptable-ejb/target/
 /ServiceComptable/ServiceComptable-web/target/
 /ServiceComptable/ServiceComptable-ear/target/
-=======
 /ServiceCommercial/ServiceCommercial-ejb/target/
 /ServiceCommercial/ServiceCommercial-web/target/
 /ServiceCommercial/ServiceCommercial-ear/target/
->>>>>>> Stashed changes
+/ServiceDesPoseurs/ServiceDesPoseurs-ejb/target/
+/ServiceDesPoseurs/ServiceDesPoseurs-web/target/
+/ServiceDesPoseurs/ServiceDesPoseurs-ear/target/
+/ServiceCommercial/ServiceCommercial-web/target/
+/ServiceCommercial/ServiceCommercial-ear/target/
+/ServiceCommercial/ServiceCommercial-ejb/target/
