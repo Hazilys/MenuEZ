@@ -17,4 +17,5 @@ public interface MetierRDVClientLocal {
     
     public void creerRDVClient(Long idAffaire, Long idClient, Long idPoseur, String datePose);
     public RDVClient getRDVClient(Long idRdvClient);
+   
 }

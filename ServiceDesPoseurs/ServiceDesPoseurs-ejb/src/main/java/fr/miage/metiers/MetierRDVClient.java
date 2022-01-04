@@ -20,6 +20,7 @@ public class MetierRDVClient implements MetierRDVClientLocal {
     @EJB
     private RDVClientFacadeLocal rdvClientFacade;
 
+    @Override
     public void creerRDVClient(Long idAffaire, Long idClient, Long idPoseur, String datePose) {
         this.rdvClientFacade.creerRDVClient(idAffaire, idClient, idPoseur, datePose);
 
@@ -28,6 +29,7 @@ public class MetierRDVClient implements MetierRDVClientLocal {
     // Add business logic below. (Right-click in editor and choose
     // "Insert Code > Add Business Method")
 
+    @Override
     public RDVClient getRDVClient(Long idRdvClient) {
         return this.rdvClientFacade.find(idRdvClient);
     }

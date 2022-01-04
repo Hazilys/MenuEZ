@@ -29,5 +29,7 @@ public interface RDVClientFacadeLocal {
     List<RDVClient> findRange(int[] range);
 
     int count();
+
+    public void creerRDVClient(Long idAffaire, Long idClient, Long idPoseur, String datePose);
     
 }

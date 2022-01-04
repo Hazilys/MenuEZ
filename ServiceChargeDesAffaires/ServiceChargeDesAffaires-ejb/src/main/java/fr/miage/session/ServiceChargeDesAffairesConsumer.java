@@ -41,9 +41,8 @@ public class ServiceChargeDesAffairesConsumer {
         ConnectionFactory factory = null;
         Connection connection = null;
         String factoryName = "ConnectionFactory";
-        String destName = null;
+        String destName = "ServiceChargeDesAffaires";
         Destination dest = null;
-        int count = 1;
         Session session = null;
         MessageConsumer receiver = null;
         
