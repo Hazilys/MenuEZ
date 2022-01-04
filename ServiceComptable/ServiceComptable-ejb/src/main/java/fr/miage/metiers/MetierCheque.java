@@ -6,6 +6,8 @@
 package fr.miage.metiers;
 
 import fr.miage.entities.Cheque;
+import fr.miage.facade.ChequeFacadeLocal;
+import javax.ejb.EJB;
 import javax.ejb.Stateless;
 
 /**
@@ -15,9 +17,12 @@ import javax.ejb.Stateless;
 @Stateless
 public class MetierCheque implements MetierChequeLocal {
 
+    @EJB
+    private ChequeFacadeLocal chequeFacade;
+
     @Override
     public void creerCheque(int numCheque, Double montant, Long idCommande) {
-        
+        this.chequeFacade.creerCheque(numCheque, montant, idCommande);
     }
 
     @Override
