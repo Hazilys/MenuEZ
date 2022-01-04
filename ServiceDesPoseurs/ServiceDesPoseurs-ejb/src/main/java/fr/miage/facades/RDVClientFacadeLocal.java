@@ -30,6 +30,6 @@ public interface RDVClientFacadeLocal {
 
     int count();
 
-    public void creerRDVClient(Long idAffaire, Long idClient, Long idPoseur, String datePose);
+    public RDVClient creerRDVClient(Long idAffaire, Long idClient, Long idPoseur, String datePose);
     
 }

@@ -30,13 +30,14 @@ public class RDVClientFacade extends AbstractFacade<RDVClient> implements RDVCli
     }
 
     @Override
-    public void creerRDVClient(Long idAffaire, Long idClient, Long idPoseur, String datePose) {
+    public RDVClient creerRDVClient(Long idAffaire, Long idClient, Long idPoseur, String datePose) {
         RDVClient rdv = new RDVClient();
         rdv.setIdAffaire(idAffaire);
         rdv.setIdClient(idClient);
         rdv.setIdPoseur(idPoseur);
         rdv.setDatePose(datePose);
         this.create(rdv);
+        return rdv;
     }
     
 }

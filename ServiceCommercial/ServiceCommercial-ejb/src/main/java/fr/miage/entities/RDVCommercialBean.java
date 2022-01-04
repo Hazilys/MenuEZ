@@ -5,7 +5,6 @@
  */
 package fr.miage.entities;
 
-import fr.miage.facades.CommandeFacadeLocal;
 import fr.miage.facades.RDVCommercialFacadeLocal;
 import java.util.Calendar;
 import javax.ejb.EJB;
