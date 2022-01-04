@@ -5,10 +5,9 @@
  */
 package fr.miage.session;
 
-import fr.miage.facades.CommandeFacadeLocal;
-import javax.ejb.EJB;
 import javax.ejb.Stateless;
 import javax.ejb.LocalBean;
+import javax.ejb.EJB;
 import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
@@ -28,10 +27,7 @@ import javax.jms.TextMessage;
  */
 @Stateless
 @LocalBean
-public class ServiceChargeDesAffairesConsumer {
-
-    @EJB
-    private CommandeFacadeLocal commandeFacade;
+public class ServiceComptableConsumer {
 
     
     
@@ -41,8 +37,9 @@ public class ServiceChargeDesAffairesConsumer {
         ConnectionFactory factory = null;
         Connection connection = null;
         String factoryName = "ConnectionFactory";
-        String destName = "ServiceChargeDesAffaires";
+        String destName = null;
         Destination dest = null;
+        int count = 1;
         Session session = null;
         MessageConsumer receiver = null;
         
@@ -50,10 +47,10 @@ public class ServiceChargeDesAffairesConsumer {
             // create the JNDI initial context
             context = new InitialContext();
 
-            destName = "ServiceChargeDesAffaires";
             // look up the ConnectionFactory
             factory = (ConnectionFactory) context.lookup(factoryName);
 
+            destName = "ServiceComptable";
             // look up the Destination
             dest = (Destination) context.lookup(destName);
 
@@ -105,8 +102,4 @@ public class ServiceChargeDesAffairesConsumer {
         }
         
     }
-    
-        
-    
-        
 }
