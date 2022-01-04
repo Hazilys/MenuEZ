@@ -6,6 +6,7 @@
 package fr.miage.facades;
 
 import fr.miage.entities.Commande;
+import fr.miage.facades.AbstractFacade;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;

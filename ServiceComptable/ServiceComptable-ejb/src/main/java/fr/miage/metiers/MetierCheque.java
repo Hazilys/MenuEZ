@@ -27,7 +27,7 @@ public class MetierCheque implements MetierChequeLocal {
 
     @Override
     public void encaisserCheque(Cheque cheque) {
-       
+       this.chequeFacade.encaisserCheque(cheque);
     }
 
 
