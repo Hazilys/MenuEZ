@@ -6,6 +6,7 @@
 package fr.miage.facades;
 
 import fr.miage.entities.RDVCommercial;
+import java.util.Calendar;
 import java.util.List;
 import javax.ejb.Local;
 
@@ -29,5 +30,7 @@ public interface RDVCommercialFacadeLocal {
     List<RDVCommercial> findRange(int[] range);
 
     int count();
+    
+    public RDVCommercial creerRDVCommercial(Long idAffaire, Long idCommercial, Long idClient, Calendar dateRDVCommercial);
     
 }
