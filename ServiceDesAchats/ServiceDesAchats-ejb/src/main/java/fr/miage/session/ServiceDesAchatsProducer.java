@@ -72,6 +72,7 @@ public class ServiceDesAchatsProducer {
     public void MAJAffaire(Long idCommande) {
         
         try {
+            destName = "ServiceChargeDesAffaires";
             context = new InitialContext();
             
             factory = (ConnectionFactory) context.lookup(factoryName);
@@ -104,6 +105,8 @@ public class ServiceDesAchatsProducer {
     public void EncaisserPremierChèque(Long idCommande) {
         
         try {
+            destName = "ServiceChargeDesAffaires";
+
             context = new InitialContext();
             
             factory = (ConnectionFactory) context.lookup(factoryName);
