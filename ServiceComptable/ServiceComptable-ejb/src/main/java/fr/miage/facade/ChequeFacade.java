@@ -6,6 +6,8 @@
 package fr.miage.facade;
 
 import fr.miage.entities.Cheque;
+import java.util.HashSet;
+import java.util.Set;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -27,6 +29,22 @@ public class ChequeFacade extends AbstractFacade<Cheque> implements ChequeFacade
 
     public ChequeFacade() {
         super(Cheque.class);
+    }
+
+    @Override
+    public void creerCheque(int numCheque, Double montant, Long idCommande) {
+        Cheque chq = new Cheque();
+        chq.setNumCheque(numCheque);
+        chq.setMontant(montant);
+        chq.setIsEncaisse(false);
+        chq.setIdCommande(idCommande);
+        this.create(chq);
+    }
+
+    @Override
+    public void encaisserCheque(Cheque cheque) {
+        Cheque chq = this.find(cheque);
+        chq.setIsEncaisse(true);
     }
     
 }
