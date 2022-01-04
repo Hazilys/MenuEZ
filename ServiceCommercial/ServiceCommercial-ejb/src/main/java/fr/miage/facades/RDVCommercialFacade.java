@@ -6,6 +6,7 @@
 package fr.miage.facades;
 
 import fr.miage.entities.RDVCommercial;
+import java.util.Calendar;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -27,6 +28,16 @@ public class RDVCommercialFacade extends AbstractFacade<RDVCommercial> implement
 
     public RDVCommercialFacade() {
         super(RDVCommercial.class);
+    }
+    
+    public RDVCommercial creerRDVCommercial(Long idAffaire, Long idCommercial, Long idClient, Calendar dateRDVCommercial) {
+        RDVCommercial rdv = new RDVCommercial();
+        rdv.setIdAffaire(idAffaire);
+        rdv.setIdCommercial(idCommercial);
+        rdv.setIdClient(idClient);
+        rdv.setDateRDVCommercial(dateRDVCommercial);
+        this.create(rdv);
+        return rdv;
     }
     
 }

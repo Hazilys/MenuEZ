@@ -37,12 +37,47 @@ public class RDVCommercial implements Serializable {
     @NotNull
     private Calendar dateRDVCommercial;
 
+    public RDVCommercial() {
+    }
+
     public Long getId() {
         return id;
     }
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public Long getIdAffaire() {
+        return idAffaire;
+    }
+
+    public void setIdAffaire(Long idAffaire) {
+        this.idAffaire = idAffaire;
+    }
+
+    public Long getIdCommercial() {
+        return idCommercial;
+    }
+
+    public void setIdCommercial(Long idCommercial) {
+        this.idCommercial = idCommercial;
+    }
+
+    public Long getIdClient() {
+        return idClient;
+    }
+
+    public void setIdClient(Long idClient) {
+        this.idClient = idClient;
+    }
+
+    public Calendar getDateRDVCommercial() {
+        return dateRDVCommercial;
+    }
+
+    public void setDateRDVCommercial(Calendar dateRDVCommercial) {
+        this.dateRDVCommercial = dateRDVCommercial;
     }
 
     @Override
