@@ -16,3 +16,6 @@
 /ServiceCommercial/ServiceCommercial-web/target/
 /ServiceCommercial/ServiceCommercial-ear/target/
 /ServiceCommercial/ServiceCommercial-ejb/target/
+/ServiceDesAchats/ServiceDesAchats-ejb/target/
+/ServiceDesAchats/ServiceDesAchats-web/target/
+/ServiceDesAchats/ServiceDesAchats-ear/target/

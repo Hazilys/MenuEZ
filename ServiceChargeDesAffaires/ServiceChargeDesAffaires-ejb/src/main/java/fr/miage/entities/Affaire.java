@@ -24,7 +24,7 @@ public class Affaire implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long idAffaire;
-    
+
     @NotNull
     private String geolocalisation;
     
@@ -32,14 +32,14 @@ public class Affaire implements Serializable {
     private ETAT etat;
     
     @NotNull
-    private Long idCA;
+    private Long idCa;
     
     @ManyToOne
     private Client client;
 
     public Affaire() {
     }
-
+    
     public Long getIdAffaire() {
         return idAffaire;
     }
@@ -64,12 +64,12 @@ public class Affaire implements Serializable {
         this.etat = etat;
     }
 
-    public Long getIdCA() {
-        return idCA;
+    public Long getIdCa() {
+        return idCa;
     }
 
-    public void setIdCA(Long idCA) {
-        this.idCA = idCA;
+    public void setIdCa(Long idCa) {
+        this.idCa = idCa;
     }
 
     public Client getClient() {

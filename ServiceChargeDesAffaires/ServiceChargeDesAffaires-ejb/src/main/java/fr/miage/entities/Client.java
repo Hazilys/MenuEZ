@@ -24,7 +24,7 @@ public class Client implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long idClient; 
+    private Long idClient;
     
     @NotNull
     private String adressePostale;
@@ -39,8 +39,8 @@ public class Client implements Serializable {
     private Collection<Affaire> affaires;
 
     public Client() {
-    }    
-    
+    }
+
     public Long getIdClient() {
         return idClient;
     }
