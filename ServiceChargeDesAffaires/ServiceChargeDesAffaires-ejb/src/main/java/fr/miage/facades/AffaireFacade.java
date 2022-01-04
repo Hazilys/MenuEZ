@@ -6,6 +6,8 @@
 package fr.miage.facades;
 
 import fr.miage.entities.Affaire;
+import fr.miage.entities.Client;
+import fr.miage.entities.ETAT;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -27,6 +29,15 @@ public class AffaireFacade extends AbstractFacade<Affaire> implements AffaireFac
 
     public AffaireFacade() {
         super(Affaire.class);
+    }
+    
+    public void creerAffaire(String geolocalisation, Long idCa, Client client) {
+        Affaire aff = new Affaire();
+        aff.setGeolocalisation(geolocalisation);
+        aff.setEtat(ETAT.CREEE);
+        aff.setIdAffaire(idCa);
+        aff.setClient(client);
+        this.create(aff);
     }
     
 }

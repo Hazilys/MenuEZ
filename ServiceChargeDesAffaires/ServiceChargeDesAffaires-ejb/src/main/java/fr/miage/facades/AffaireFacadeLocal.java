@@ -6,6 +6,8 @@
 package fr.miage.facades;
 
 import fr.miage.entities.Affaire;
+import fr.miage.entities.Client;
+import fr.miage.entities.ETAT;
 import java.util.List;
 import javax.ejb.Local;
 
@@ -29,5 +31,7 @@ public interface AffaireFacadeLocal {
     List<Affaire> findRange(int[] range);
 
     int count();
+    
+    public void creerAffaire(String geolocalisation, Long idCa, Client client);
     
 }

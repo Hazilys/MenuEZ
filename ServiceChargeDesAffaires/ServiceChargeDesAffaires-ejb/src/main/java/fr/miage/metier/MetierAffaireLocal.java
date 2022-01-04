@@ -16,5 +16,5 @@ import javax.ejb.Local;
 @Local
 public interface MetierAffaireLocal {
     
-    public void creerAffaire(String geolocalisation, ETAT etat, Long idCa, Client client);
+    public void creerAffaire(String geolocalisation, Long idCa, Client client);
 }
