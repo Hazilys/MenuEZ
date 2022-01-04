@@ -5,6 +5,8 @@
  */
 package fr.miage.metier;
 
+import fr.miage.entities.Client;
+import fr.miage.entities.ETAT;
 import javax.ejb.Local;
 
 /**
