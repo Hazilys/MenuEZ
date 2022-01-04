@@ -22,19 +22,19 @@ public class Poseurs implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private Long idPoseur;
     
     @NotNull
     private String nomPoseur;
 
-    public Long getId() {
-        return id;
+    public Long getIdPoseur() {
+        return idPoseur;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setIdPoseur(Long idPoseur) {
+        this.idPoseur = idPoseur;
     }
-    
+
     public String getNomPoseur() {
         return nomPoseur;
     }
@@ -42,11 +42,14 @@ public class Poseurs implements Serializable {
     public void setNomPoseur(String nomPoseur) {
         this.nomPoseur = nomPoseur;
     }
+    
+
+
 
     @Override
     public int hashCode() {
         int hash = 0;
-        hash += (id != null ? id.hashCode() : 0);
+        hash += (idPoseur != null ? idPoseur.hashCode() : 0);
         return hash;
     }
 
@@ -57,7 +60,7 @@ public class Poseurs implements Serializable {
             return false;
         }
         Poseurs other = (Poseurs) object;
-        if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
+        if ((this.idPoseur == null && other.idPoseur != null) || (this.idPoseur != null && !this.idPoseur.equals(other.idPoseur))) {
             return false;
         }
         return true;
@@ -65,7 +68,7 @@ public class Poseurs implements Serializable {
 
     @Override
     public String toString() {
-        return "fr.miage.entities.Poseurs[ id=" + id + " ]";
+        return "fr.miage.entities.Poseurs[ id=" + idPoseur + " ]";
     }
     
 }

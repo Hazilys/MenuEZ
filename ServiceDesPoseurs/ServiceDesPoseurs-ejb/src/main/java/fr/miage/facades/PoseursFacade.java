@@ -17,7 +17,7 @@ import javax.persistence.PersistenceContext;
 @Stateless
 public class PoseursFacade extends AbstractFacade<Poseurs> implements PoseursFacadeLocal {
 
-    @PersistenceContext(unitName = "fr.miage_ServiceDesPoseurs-ejb_ejb_1.0-SNAPSHOTPU")
+    @PersistenceContext(unitName = "com.mycompany_ServiceDesPoseurs-ejb_ejb_1.0-SNAPSHOTPU")
     private EntityManager em;
 
     @Override
@@ -29,4 +29,11 @@ public class PoseursFacade extends AbstractFacade<Poseurs> implements PoseursFac
         super(Poseurs.class);
     }
     
+    public void creerPoseur(String nomPoseur) {
+        Poseurs psr = new Poseurs();
+        psr.setNomPoseur(nomPoseur);
+        this.create(psr);
+    }
+
+            
 }

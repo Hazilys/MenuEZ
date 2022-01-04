@@ -17,7 +17,7 @@ import javax.persistence.PersistenceContext;
 @Stateless
 public class RDVClientFacade extends AbstractFacade<RDVClient> implements RDVClientFacadeLocal {
 
-    @PersistenceContext(unitName = "fr.miage_ServiceDesPoseurs-ejb_ejb_1.0-SNAPSHOTPU")
+    @PersistenceContext(unitName = "com.mycompany_ServiceDesPoseurs-ejb_ejb_1.0-SNAPSHOTPU")
     private EntityManager em;
 
     @Override
@@ -27,6 +27,16 @@ public class RDVClientFacade extends AbstractFacade<RDVClient> implements RDVCli
 
     public RDVClientFacade() {
         super(RDVClient.class);
+    }
+
+    @Override
+    public void creerRDVClient(Long idAffaire, Long idClient, Long idPoseur, String datePose) {
+        RDVClient rdv = new RDVClient();
+        rdv.setIdAffaire(idAffaire);
+        rdv.setIdClient(idClient);
+        rdv.setIdPoseur(idPoseur);
+        rdv.setDatePose(datePose);
+        this.create(rdv);
     }
     
 }

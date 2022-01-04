@@ -22,28 +22,28 @@ public class RDVClient implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private Long idRdvClient;
+    
     
     @NotNull
     private Long idAffaire;
-        
+    
     @NotNull
     private Long idClient;
     
     @NotNull
-    private Long idPoseurs;
+    private Long idPoseur;
     
     @NotNull
     private String datePose;
 
-    public Long getId() {
-        return id;
+    public Long getIdRdvClient() {
+        return idRdvClient;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setIdRdvClient(Long idRdvClient) {
+        this.idRdvClient = idRdvClient;
     }
-    
 
     public Long getIdAffaire() {
         return idAffaire;
@@ -61,12 +61,12 @@ public class RDVClient implements Serializable {
         this.idClient = idClient;
     }
 
-    public Long getIdPoseurs() {
-        return idPoseurs;
+    public Long getIdPoseur() {
+        return idPoseur;
     }
 
-    public void setIdPoseurs(Long idPoseurs) {
-        this.idPoseurs = idPoseurs;
+    public void setIdPoseur(Long idPoseur) {
+        this.idPoseur = idPoseur;
     }
 
     public String getDatePose() {
@@ -76,11 +76,11 @@ public class RDVClient implements Serializable {
     public void setDatePose(String datePose) {
         this.datePose = datePose;
     }
-    
+
     @Override
     public int hashCode() {
         int hash = 0;
-        hash += (id != null ? id.hashCode() : 0);
+        hash += (idRdvClient != null ? idRdvClient.hashCode() : 0);
         return hash;
     }
 
@@ -91,7 +91,7 @@ public class RDVClient implements Serializable {
             return false;
         }
         RDVClient other = (RDVClient) object;
-        if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
+        if ((this.idRdvClient == null && other.idRdvClient != null) || (this.idRdvClient != null && !this.idRdvClient.equals(other.idRdvClient))) {
             return false;
         }
         return true;
@@ -99,7 +99,7 @@ public class RDVClient implements Serializable {
 
     @Override
     public String toString() {
-        return "fr.miage.entities.RDVClient[ id=" + id + " ]";
+        return "fr.miage.entities.RDVClient[ id=" + idRdvClient + " ]";
     }
     
 }
