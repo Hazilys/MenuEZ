@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< Updated upstream
-<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
-  <persistence-unit name="fr.miage_ServiceDesPoseurs-ejb_ejb_1.0-SNAPSHOTPU" transaction-type="JTA">
-=======
 <persistence version="1.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd">
   <persistence-unit name="com.mycompany_ServiceDesPoseurs-ejb_ejb_1.0-SNAPSHOTPU" transaction-type="JTA">
->>>>>>> Stashed changes
+
     <jta-data-source>java:app/jdbc/ServiceDesPoseursDatasource</jta-data-source>
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <properties>

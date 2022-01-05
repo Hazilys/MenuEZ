@@ -32,4 +32,6 @@ public interface RDVClientFacadeLocal {
 
     public RDVClient creerRDVClient(Long idAffaire, Long idClient, Long idPoseur, String datePose);
     
+    public List<RDVClient> getRDVClient();
+    
 }

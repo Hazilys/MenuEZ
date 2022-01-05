@@ -6,7 +6,9 @@
 package fr.miage.entities;
 
 import fr.miage.facades.RDVClientFacadeLocal;
+import java.util.List;
 import javax.ejb.EJB;
+import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
 
 /**
@@ -14,6 +16,7 @@ import javax.ejb.Stateless;
  * @author Camille
  */
 @Stateless
+@LocalBean
 public class RDVClientBean implements RDVClientBeanLocal {
 
     @EJB
@@ -21,5 +24,10 @@ public class RDVClientBean implements RDVClientBeanLocal {
 
     public RDVClient creerRDVClient(Long idAffaire, Long idClient, Long idPoseur, String datePose){
         return this.RDVClientFacade.creerRDVClient(idAffaire, idClient, idPoseur, datePose);
+    }
+
+    @Override
+    public List<RDVClient> getRDVClient(){
+        return this.RDVClientFacade.getRDVClient();
     }
 }

@@ -5,6 +5,7 @@
  */
 package fr.miage.entities;
 
+import java.util.List;
 import javax.ejb.Local;
 
 /**
@@ -15,4 +16,6 @@ import javax.ejb.Local;
 public interface RDVClientBeanLocal {
  
     public RDVClient creerRDVClient(Long idAffaire, Long idClient, Long idPoseur, String datePose);
+    
+    public List<RDVClient> getRDVClient();
 }

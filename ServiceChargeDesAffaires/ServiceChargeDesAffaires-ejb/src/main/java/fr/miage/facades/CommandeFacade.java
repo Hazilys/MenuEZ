@@ -18,7 +18,7 @@ import javax.persistence.PersistenceContext;
 @Stateless
 public class CommandeFacade extends AbstractFacade<Commande> implements CommandeFacadeLocal {
 
-    @PersistenceContext(unitName = "ServiceCommercialPersistenceUnit")
+    @PersistenceContext(unitName = "ServiceChargeDesAffairesPersistenceUnit")
     private EntityManager em;
 
     @Override

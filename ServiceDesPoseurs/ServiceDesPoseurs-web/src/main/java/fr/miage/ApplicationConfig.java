@@ -29,6 +29,7 @@ public class ApplicationConfig extends javax.ws.rs.core.Application {
      */
     private void addRestResourceClasses(Set<Class<?>> resources) {
         resources.add(fr.miage.RDVPoResource.class);
+        resources.add(fr.miage.RDVPoseurResource.class);
     }
     
 }

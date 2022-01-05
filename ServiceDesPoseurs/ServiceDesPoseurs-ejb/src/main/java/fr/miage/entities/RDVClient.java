@@ -22,8 +22,7 @@ public class RDVClient implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long idRdvClient;
-    
+    private Long idRdvClient;    
     
     @NotNull
     private Long idAffaire;

@@ -6,6 +6,7 @@
 package fr.miage.facades;
 
 import fr.miage.entities.RDVClient;
+import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -38,6 +39,11 @@ public class RDVClientFacade extends AbstractFacade<RDVClient> implements RDVCli
         rdv.setDatePose(datePose);
         this.create(rdv);
         return rdv;
+    }
+
+    @Override
+    public List<RDVClient> getRDVClient() {
+        return this.findAll();
     }
     
 }
