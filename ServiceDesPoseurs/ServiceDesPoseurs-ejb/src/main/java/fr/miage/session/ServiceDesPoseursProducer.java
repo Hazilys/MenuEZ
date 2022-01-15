@@ -7,6 +7,13 @@ package fr.miage.session;
 
 import javax.ejb.Stateless;
 import javax.ejb.LocalBean;
+import javax.jms.Connection;
+import javax.jms.ConnectionFactory;
+import javax.jms.Destination;
+import javax.jms.JMSException;
+import javax.jms.MessageProducer;
+import javax.jms.Session;
+import javax.jms.TextMessage;
 import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
@@ -31,7 +38,7 @@ public class ServiceDesPoseursProducer {
         private static String text = null;
         
         public static void main(String[] args) {
-            NotifierSCA(count, Double.NaN, Long.MIN_VALUE);
+            NotifierSCA(3l);
         }
         
          public static void NotifierSCA(Long idAffaire) {
