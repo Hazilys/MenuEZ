@@ -27,22 +27,22 @@ import javax.naming.NamingException;
 @Stateless
 @LocalBean
 public class ServiceDesAchatsProducer {
-    Context context = null;
-    ConnectionFactory factory = null;
-    Connection connection = null;
-    String factoryName = "ConnectionFactory";
-    String destName = null;
-    Destination dest =  null;
-    Session session =  null;
-    MessageProducer sender = null;
+    private static Context context = null;
+    private static ConnectionFactory factory = null;
+    private static Connection connection = null;
+    private static String factoryName = "ConnectionFactory";
+    private static String destName = null;
+    private static Destination dest =  null;
+    private static Session session =  null;
+    private static MessageProducer sender = null;
     
-    public void main(String[] args){
+    public static void main(String[] args){
         
         CommanderMenuiserie(1l);
         
     }
     
-    public void CommanderMenuiserie(Long idCommande) {
+    public static void CommanderMenuiserie(Long idCommande) {
         
         try {
             System.out.println("fr.miage.session.ServiceDesAchatsProducer.CommanderMenuiserie()");
