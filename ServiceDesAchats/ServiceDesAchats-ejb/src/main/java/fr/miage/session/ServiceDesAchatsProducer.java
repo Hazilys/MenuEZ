@@ -36,9 +36,16 @@ public class ServiceDesAchatsProducer {
     Session session =  null;
     MessageProducer sender = null;
     
+    public void main(String[] args){
+        
+        CommanderMenuiserie(1l);
+        
+    }
+    
     public void CommanderMenuiserie(Long idCommande) {
         
         try {
+            System.out.println("fr.miage.session.ServiceDesAchatsProducer.CommanderMenuiserie()");
             destName = "ServiceChargeDesAffaires";
             context = new InitialContext();
             
@@ -59,9 +66,7 @@ public class ServiceDesAchatsProducer {
             sender.send(message);
             
             
-        } catch (NamingException ex) {
-            Logger.getLogger(ServiceDesAchatsProducer.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (JMSException ex) {
+        } catch (NamingException | JMSException ex) {
             Logger.getLogger(ServiceDesAchatsProducer.class.getName()).log(Level.SEVERE, null, ex);
         }
         
