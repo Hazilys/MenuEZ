@@ -16,14 +16,14 @@ import javax.jms.ObjectMessage;
 
 /**
  *
- * @author Camille
+ * @author Elias
  */
-@MessageDriven(mappedName = "jms/ServiceChargeDesAffairesQueue", activationConfig = {
+@MessageDriven(mappedName = "jms/ServiceComptableListenerQueue", activationConfig = {
     @ActivationConfigProperty(propertyName = "destinationType", propertyValue = "javax.jms.Queue")
 })
-public class ServiceChargeDesAffairesListener implements MessageListener {
+public class ServiceComptableListener implements MessageListener {
     
-    public ServiceChargeDesAffairesListener() {
+    public ServiceComptableListener() {
     }
     
     @Override
@@ -33,7 +33,7 @@ public class ServiceChargeDesAffairesListener implements MessageListener {
         try {                
             System.out.println(text.getObject());
         } catch (JMSException ex) {
-            Logger.getLogger(ServiceChargeDesAffairesListener.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ServiceComptableListener.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
     

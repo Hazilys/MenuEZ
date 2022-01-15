@@ -45,8 +45,7 @@ public class ServiceDesAchatsProducer {
     public static void CommanderMenuiserie(Long idCommande) {
         
         try {
-            System.out.println("fr.miage.session.ServiceDesAchatsProducer.CommanderMenuiserie()");
-            destName = "ServiceChargeDesAffaires";
+            destName = "ServiceChargeDesAffairesQueue";
             context = new InitialContext();
             
             factory = (ConnectionFactory) context.lookup(factoryName);
@@ -77,7 +76,7 @@ public class ServiceDesAchatsProducer {
     public void MAJAffaire(Long idCommande) {
         
         try {
-            destName = "ServiceChargeDesAffaires";
+            destName = "ServiceChargeDesAffairesQueue";
             context = new InitialContext();
             
             factory = (ConnectionFactory) context.lookup(factoryName);
@@ -110,7 +109,7 @@ public class ServiceDesAchatsProducer {
     public void EncaisserPremierChèque(Long idCommande) {
         
         try {
-            destName = "ServiceChargeDesAffaires";
+            destName = "ServiceChargeDesAffairesQueue";
 
             context = new InitialContext();
             

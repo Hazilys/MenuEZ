@@ -26,19 +26,24 @@ import javax.naming.NamingException;
 @LocalBean
 public class ServiceComProducer {
 
-        Context context = null;
-        ConnectionFactory factory = null;
-        Connection connection = null;
-        String factoryName = "ConnectionFactory";
-        String destName = null;
-        Destination dest = null;
-        int count = 1;
-        Session session = null;
-        MessageProducer sender = null;
-        String text = null;
+        private static Context context = null;
+        private static ConnectionFactory factory = null;
+        private static Connection connection = null;
+        private static String factoryName = "ConnectionFactory";
+        private static String destName = null;
+        private static Destination dest = null;
+        private static int count = 1;
+        private static Session session = null;
+        private static MessageProducer sender = null;
+        private static String text = null;
+        
+        public static void main(String[] args) {
+            renseignerInfosCommande(destName, text, Double.MIN_NORMAL, Boolean.FALSE, Boolean.FALSE, Long.MIN_VALUE);
+            deposerCheque(count, Double.NaN, Long.MIN_VALUE);
+        }
         
         
-        public void renseignerInfosCommande(String refCatalogue, String cotes, Double montantNeogicie, Boolean commandePassee, Boolean commandeLivree, Long idAffaire) {
+        public static void renseignerInfosCommande(String refCatalogue, String cotes, Double montantNeogicie, Boolean commandePassee, Boolean commandeLivree, Long idAffaire) {
             
             try {
             // create the JNDI initial context.
@@ -46,7 +51,7 @@ public class ServiceComProducer {
 
             // look up the ConnectionFactory
             factory = (ConnectionFactory) context.lookup(factoryName);
-            destName = "ServiceChargeDesAffaires";
+            destName = "ServiceChargeDesAffairesQueue";
             // look up the Destination
             dest = (Destination) context.lookup(destName);
 
@@ -68,9 +73,7 @@ public class ServiceComProducer {
             message.setText(text);
             sender.send(message);
             
-        } catch (JMSException exception) {
-            exception.printStackTrace();
-        } catch (NamingException exception) {
+        } catch (JMSException | NamingException exception) {
             exception.printStackTrace();
         } finally {
             // close the context
@@ -95,7 +98,7 @@ public class ServiceComProducer {
     
 }
         
-        public void deposerCheque(int numCheque, Double montant, Long idCommande) {
+        public static void deposerCheque(int numCheque, Double montant, Long idCommande) {
             
             try {
             // create the JNDI initial context.
@@ -104,7 +107,7 @@ public class ServiceComProducer {
             // look up the ConnectionFactory
             factory = (ConnectionFactory) context.lookup(factoryName);
             
-            destName = "ServiceComptable";
+            destName = "ServiceComptableQueue";
             // look up the Destination
             dest = (Destination) context.lookup(destName);
 
